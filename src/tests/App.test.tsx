@@ -36,7 +36,7 @@ describe('App', () => {
   });
 
   test('redireciona para about ao clicar no link notfound', () => {
-    renderWithRouter(<App />, { route: '/something-else' });
+    renderWithRouter(<App />, { route: '/notfound' });
 
     expect(screen.getByText('Page requested not found')).toBeInTheDocument();
   });
