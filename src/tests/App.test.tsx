@@ -11,7 +11,7 @@ describe('App', () => {
     expect(screen.getByText('Favorite Pokémon')).toBeInTheDocument();
   });
 
-  test('redireciona para about ao clicar no link home', async () => {
+  test('redireciona para home ao clicar no link home', async () => {
     const { user } = renderWithRouter(<App />);
 
     const linkHome = screen.getByRole('link', { name: /home/i });
@@ -27,7 +27,7 @@ describe('App', () => {
     expect(screen.getByText('About')).toBeInTheDocument();
   });
 
-  test('redireciona para about ao clicar no link favorite', async () => {
+  test('redireciona para favorite ao clicar no link favorite', async () => {
     const { user } = renderWithRouter(<App />);
 
     const favoriteLink = screen.getByRole('link', { name: /favorite pokémon/i });
@@ -35,7 +35,7 @@ describe('App', () => {
     expect(favoriteLink).toBeInTheDocument();
   });
 
-  test('redireciona para about ao clicar no link notfound', () => {
+  test('redireciona para not found ao usar rota não existente', () => {
     renderWithRouter(<App />, { route: '/notfound' });
 
     expect(screen.getByText('Page requested not found')).toBeInTheDocument();
