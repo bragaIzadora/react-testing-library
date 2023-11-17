@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
-describe('Pokedex', () => {
+describe('Pokemon', () => {
   test('Verifica renderização do card', async () => {
     const { user } = renderWithRouter(<App />);
 
